@@ -1,0 +1,3 @@
+Challenge: Managing task updates while keeping the UI and localStorage synchronized after adding, completing, deleting, and filtering tasks.
+
+Solution: I stored tasks in an array of objects and created reusable functions to render the task list, update localStorage, and refresh the task counters whenever the data changed. This kept the UI consistent and made the code easier to maintain.

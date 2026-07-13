@@ -1,0 +1,5 @@
+ Developed a responsive Student Registration Form using HTML, CSS, and JavaScript.
+ 
+  The application validates user input by checking for empty fields, validating the email format, ensuring a valid 10-digit phone number, and confirming that both password fields match.
+A success message is displayed after successful submission, and the entered student data is stored in the browser's Local Storage.
+ The project also includes a Reset button, a Dark/Light Theme Toggle, and a responsive layout that works well on desktop and mobile devices.

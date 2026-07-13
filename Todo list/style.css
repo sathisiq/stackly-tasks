@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.container{
+    width:600px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-section{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+input{
+    flex:1;
+    padding:10px;
+}
+
+select{
+    padding:10px;
+}
+
+button{
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.counter{
+    text-align:center;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eee;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.completed span{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.badge{
+    padding:4px 8px;
+    border-radius:5px;
+    color:white;
+    font-size:12px;
+}
+
+.high{
+    background:red;
+}
+
+.medium{
+    background:orange;
+}
+
+.low{
+    background:green;
+}
+
+.date{
+    font-size:12px;
+    color:#666;
+}
+
+.deleteBtn{
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+}

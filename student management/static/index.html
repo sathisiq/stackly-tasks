@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div><p class="eyebrow">STUDENT MANAGEMENT SYSTEM <p class="subtext">Keep student records organised, searchable and always up to date.</p></div>
+      <div class="hero-mark" aria-hidden="true">S</div>
+    </header>
+
+    <section class="stats" aria-label="Dashboard statistics">
+      <article class="stat-card total"><span>Total students</span><strong id="totalCount">0</strong><small>Across every course</small></article>
+      <div id="courseStats" class="course-stats"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="form-panel">
+        <div class="section-heading"><p class="eyebrow">STUDENT RECORD</p><h2 id="formTitle">Add a student</h2></div>
+        <form id="studentForm" novalidate>
+          <input id="studentId" type="hidden">
+          <label>Full name<input id="fullName" name="full_name" maxlength="100" placeholder="e.g. Priya Sharma" required></label>
+          <label>Email address<input id="email" name="email" type="email" maxlength="100" placeholder="priya@example.com" required></label>
+          <label>Phone number<input id="phone" name="phone" maxlength="15" placeholder="9876543210" required></label>
+          <label>Course<input id="course" name="course" maxlength="50" placeholder="e.g. Python" required></label>
+          <p id="formError" class="form-error" role="alert"></p>
+          <div class="form-actions"><button class="primary" id="saveButton" type="submit">Add student</button><button class="secondary hidden" id="cancelEdit" type="button">Cancel</button></div>
+        </form>
+      </aside>
+
+      <section class="records-panel">
+        <div class="records-top"><div><p class="eyebrow">DIRECTORY</p><h2>Students</h2></div><label class="search"><span>⌕</span><input id="searchInput" placeholder="Search name or course" aria-label="Search students"></label></div>
+        <p id="statusMessage" class="status" role="status"></p>
+        <div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Course</th><th>Enrolled on</th><th>Actions</th></tr></thead><tbody id="studentTable"></tbody></table></div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

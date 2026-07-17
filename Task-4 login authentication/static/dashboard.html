@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1 id="welcome">Loading your dashboard…</h1>
+        <p class="subtitle">Your authenticated account overview.</p>
+        <section class="details">
+            <div class="detail"><span>Role</span><strong id="role">—</strong></div>
+            <div class="detail"><span>Account created</span><strong id="created-at">—</strong></div>
+            <div class="detail"><span>Email</span><strong id="email">—</strong></div>
+        </section>
+        <p id="message" class="notice" aria-live="polite"></p><button id="logout">Log out</button>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

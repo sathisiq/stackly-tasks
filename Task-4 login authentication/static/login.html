@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in | Auth System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Sign in to access your dashboard.</p>
+        <form id="login-form" novalidate><label for="username">Username</label><input id="username" name="username"
+                autocomplete="username" required><label for="password">Password</label><input id="password"
+                name="password" type="password" autocomplete="current-password" required><label class="remember"><input
+                    id="rememberMe" type="checkbox">Remember me for 14 days</label>
+            <p id="message" class="notice" aria-live="polite"></p><button>Sign in</button>
+        </form>
+        <p>New here? <a class="link" href="/register.html">Create an account</a></p>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spendly</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="auth">
+    <main class="auth-card">
+        <div class="logo">Spendly</div>
+        <h1>Welcome back</h1>
+        <p class="sub">Log in to keep your spending in view.</p>
+        <form id="loginForm">
+            <div class="field"><label>Username or email</label><input name="identity" required autocomplete="username">
+            </div>
+            <div class="field"><label>Password</label><input name="password" type="password" required
+                    autocomplete="current-password"></div><button>Log in</button>
+            <p id="message" class="message"></p>
+        </form>
+        <p class="auth-footer">New here? <a href="/register.html">Create an account</a></p>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

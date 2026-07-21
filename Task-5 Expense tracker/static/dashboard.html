@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spendly</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="shell">
+        <nav class="nav"><a class="logo" href="/dashboard.html">Spendly</a>
+            <div class="nav-links"><a class="active" href="/dashboard.html">Dashboard</a><a
+                    href="/expenses.html">Expenses</a><button class="small secondary" data-logout>Logout</button></div>
+        </nav>
+        <h1 class="welcome">Hello, <span id="username">there</span>!</h1>
+        <section class="cards">
+            <article class="card"><span>Total Expenses</span><strong id="totalCount">0</strong></article>
+            <article class="card"><span>Total Amount Spent</span><strong id="totalAmount">₹0.00</strong></article>
+            <article class="card"><span>Highest Expense</span><strong id="highest">₹0.00</strong></article>
+            <article class="card"><span>Categories Used</span><strong id="categoryCount">0</strong></article>
+        </section>
+        <section class="grid">
+            <article class="panel">
+                <h2>Category breakdown</h2>
+                <div id="breakdown" class="breakdown"></div>
+            </article>
+            <article class="panel">
+                <h2>Quick tip</h2>
+                <p class="sub">Record each expense as it happens. Small entries make your monthly picture much clearer.
+                </p><a href="/expenses.html"><button>Add an expense</button></a>
+            </article>
+        </section>
+        <section class="panel recent">
+            <h2>Recent expenses</h2>
+            <div id="recent"></div>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

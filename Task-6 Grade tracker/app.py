@@ -20,8 +20,11 @@ DB_CONFIG = {
 }
 
 GRADE_REMARKS = {
-    "A": "Outstanding", "B": "Well done", "C": "Keep improving",
-    "D": "Needs attention", "F": "Please seek help",
+    "A": "Outstanding",
+     "B": "Well done", 
+     "C": "Keep improving",
+    "D": "Needs attention", 
+    "F": "Please seek help",
 }
 
 

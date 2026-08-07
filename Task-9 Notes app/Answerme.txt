@@ -1,0 +1,85 @@
+ ### 1. Difference Between State and Props
+
+**State** is data that is managed and controlled by a component. When state changes, React automatically re-renders the component and updates the UI.
+
+In my Notes App, `App.jsx` owns the notes state:
+
+```jsx
+const [notes, setNotes] = useState([]);
+```
+
+Here, `notes` stores all the notes and `setNotes` is used to update them.
+
+**Props** are data or functions passed from a parent component to a child component. Props are read-only in the child component.
+
+
+```jsx
+<NoteCard note={note} onDelete={deleteNote} />
+```
+
+Here, `note` and `onDelete` are props received by `NoteCard`.
+
+**In short:**
+
+* State → managed inside a component and can change.
+* Props → passed from parent to child and should not be directly modified by the child.
+
+
+### 2. Why Use useState Instead of a Regular Variable?
+
+We use `useState` because React needs to know when data changes so that it can update the UI automatically.
+
+For example:
+
+```jsx
+const [notes, setNotes] = useState([]);
+```
+
+When a new note is added, I use `setNotes()` to update the notes:
+
+```jsx
+setNotes([...notes, newNote]);
+```
+
+React detects this state change and re-renders the components, so the new note automatically appears on the screen.
+
+If I used a regular JavaScript variable:
+
+```jsx
+let notes = [];
+```
+
+changing the variable would not tell React to re-render the UI. Therefore, the new or deleted note would not automatically appear on the page.
+
+**Therefore, `useState` is used because it stores changing data and tells React to update the UI when that data changes.**
+
+
+3. Dependency Array in useEffect
+
+The dependency array tells React **when the `useEffect` function should run.
+
+Empty dependency array ;
+
+When the dependency array is empty, the effect runs **only once when the component first loads**.
+
+ this can be used to load notes from `localStorage` when the application starts.
+
+#### `[notes]` dependency
+
+```jsx
+useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+}, [notes]);
+```
+
+When `[notes]` is used, the effect runs whenever the `notes` state changes.
+
+For example:
+
+* A new note is added → effect runs.
+* A note is deleted → effect runs.
+* Notes are edited → effect runs.
+
+This allows my application to automatically save the latest notes to `localStorage`.
+
+ 

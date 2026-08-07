@@ -1,0 +1,185 @@
+:root {
+    --bg: #eaf2ff;
+    --surface: rgba(255, 255, 255, 0.95);
+    --surface-soft: #f7f9ff;
+    --accent: #3b6df0;
+    --accent-hover: #2e55d1;
+    --accent-soft: rgba(59, 109, 240, 0.16);
+    --text: #1d2736;
+    --muted: #5f6b7d;
+    --border: #d9e2f3;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #eef5ff 0%, #f8fbff 55%, #ffffff 100%);
+    color: var(--text);
+}
+
+.container {
+    max-width: 980px;
+    margin: 36px auto;
+    padding: 28px 24px 36px;
+    background: var(--surface);
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgba(55, 86, 148, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 2.2vw, 2.7rem);
+    letter-spacing: -0.04em;
+}
+
+.meta {
+    margin: 10px 0 22px;
+    color: var(--muted);
+    font-size: 0.97rem;
+}
+
+.form {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr auto;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.form input,
+.form textarea,
+.form select,
+.searchbar input,
+.searchbar select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface-soft);
+    color: var(--text);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus,
+.searchbar input:focus,
+.searchbar select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(59, 109, 240, 0.12);
+}
+
+.form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent), #2d5dda);
+    color: #fff;
+    border: none;
+    padding: 0 22px;
+    min-height: 48px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(239, 241, 247, 0.95);
+    box-shadow: 0 12px 32px rgba(23, 44, 88, 0.08);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.82rem;
+    margin-bottom: 14px;
+}
+
+.card p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.card .actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.card .btn {
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 999px;
+    box-shadow: none;
+}
+
+.empty {
+    padding: 30px 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+    background: var(--surface-soft);
+    border-radius: 20px;
+}
+
+@media (max-width: 720px) {
+    .form-row,
+    .searchbar {
+        grid-template-columns: 1fr;
+    }
+    .btn {
+        width: 100%;
+    }
+}

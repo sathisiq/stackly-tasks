@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #f6f7fb;
+    color: #20243a;
+    font-family: 'DM Sans', sans-serif
+}
+
+.navbar {
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid #eceef4;
+    display: flex;
+    align-items: center;
+    padding: 0 max(28px, calc((100vw - 1280px)/2));
+    gap: 10px;
+    font-family: Manrope;
+    font-weight: 800;
+    font-size: 18px
+}
+
+.brand-mark {
+    background: #5963e8;
+    color: white;
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.nav-label {
+    font: 500 13px 'DM Sans';
+    color: #858a9b
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background: #eef0ff;
+    color: #5963e8;
+    border-radius: 50%;
+    font: 700 11px 'DM Sans';
+    display: grid;
+    place-items: center
+}
+
+.dashboard {
+    max-width: 1280px;
+    margin: auto;
+    padding: 34px 28px 52px
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-size: 10px;
+    font-weight: 700;
+    color: #858ba3;
+    margin: 0 0 6px
+}
+
+.intro h1 {
+    font: 800 30px Manrope;
+    margin: 0 0 5px;
+    letter-spacing: -1px
+}
+
+.intro>div>p:last-child {
+    color: #777e91;
+    margin: 0;
+    font-size: 14px
+}
+
+.live-dot {
+    font-size: 12px;
+    color: #278b6f;
+    background: #e5f6ef;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-weight: 600
+}
+
+.live-dot:before {
+    content: '•';
+    font-size: 18px;
+    vertical-align: -1px;
+    margin-right: 4px
+}
+
+.filters {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+    background: #fff;
+    padding: 14px 17px;
+    border: 1px solid #eceef4;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px #28304a08
+}
+
+.filter-title {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.filter-title small {
+    font-size: 11px;
+    color: #8c91a1;
+    font-weight: 400
+}
+
+.filters label {
+    display: grid;
+    gap: 5px;
+    color: #767c90;
+    font-size: 11px;
+    font-weight: 600
+}
+
+.filters input,
+.filters select {
+    font: 500 13px 'DM Sans';
+    color: #363b4e;
+    border: 1px solid #dfe2eb;
+    background: #fff;
+    border-radius: 7px;
+    padding: 8px 9px;
+    min-width: 142px;
+    height: 35px
+}
+
+.filters button {
+    border: 0;
+    background: transparent;
+    color: #5963e8;
+    padding: 8px 3px;
+    font: 600 12px 'DM Sans';
+    cursor: pointer
+}
+
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 18px
+}
+
+.kpi,
+.panel {
+    background: #fff;
+    border: 1px solid #eceef4;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #28304a08
+}
+
+.kpi {
+    padding: 17px;
+    min-height: 126px;
+    position: relative
+}
+
+.kpi-icon {
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+    background: #eef0ff;
+    color: #5963e8;
+    display: grid;
+    place-items: center;
+    font-weight: 700
+}
+
+.kpi p {
+    margin: 0 0 11px;
+    color: #848a9c;
+    font-size: 12px
+}
+
+.kpi h2 {
+    font: 800 20px Manrope;
+    letter-spacing: -.5px;
+    margin: 0;
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.kpi small {
+    font-size: 11px;
+    color: #8490a0;
+    display: block;
+    margin-top: 5px
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f2f3f7, #fbfbfc, #f2f3f7);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite
+}
+
+@keyframes shimmer {
+    to {
+        background-position: -200% 0
+    }
+}
+
+.panel {
+    padding: 20px
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.panel h2 {
+    font: 800 16px Manrope;
+    margin: 0;
+    letter-spacing: -.3px
+}
+
+.wide {
+    margin-bottom: 18px
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px
+}
+
+.lower {
+    margin-top: 18px
+}
+
+.chart {
+    height: 260px
+}
+
+.line-chart {
+    height: 275px
+}
+
+.chart-empty {
+    height: 260px;
+    display: grid;
+    place-items: center;
+    color: #9297a8;
+    font-size: 13px
+}
+
+.recharts-default-tooltip {
+    border: 1px solid #e5e7ef !important;
+    border-radius: 8px !important;
+    box-shadow: 0 5px 18px #26305118 !important;
+    font-size: 12px !important
+}
+
+.table-wrap {
+    overflow-x: auto;
+    min-height: 260px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px
+}
+
+th {
+    text-align: left;
+    color: #969bad;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 9px 7px;
+    border-bottom: 1px solid #eff0f4
+}
+
+td {
+    padding: 12px 7px;
+    border-bottom: 1px solid #f0f1f5;
+    color: #62697b;
+    white-space: nowrap
+}
+
+.product {
+    font-weight: 600;
+    color: #363b4e
+}
+
+.revenue {
+    font-weight: 700;
+    color: #3f465b
+}
+
+.rank {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background: #eef0ff;
+    color: #5963e8;
+    font-size: 10px;
+    font-weight: 700
+}
+
+.tag {
+    background: #f3f4f8;
+    border-radius: 9px;
+    padding: 4px 7px;
+    font-size: 10px
+}
+
+.error {
+    color: #a0394f;
+    background: #fff0f2;
+    border: 1px solid #ffd9df;
+    padding: 11px 13px;
+    border-radius: 9px;
+    font-size: 13px;
+    margin-bottom: 18px
+}
+
+@media(max-width:850px) {
+    .kpis {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .two-col {
+        grid-template-columns: 1fr
+    }
+
+    .filters {
+        flex-wrap: wrap
+    }
+
+    .filter-title {
+        width: 100%;
+        margin-bottom: 2px
+    }
+
+    .intro {
+        gap: 15px
+    }
+}
+
+@media(max-width:520px) {
+    .dashboard {
+        padding: 24px 14px
+    }
+
+    .navbar {
+        padding: 0 15px
+    }
+
+    .nav-label {
+        display: none
+    }
+
+    .intro h1 {
+        font-size: 25px
+    }
+
+    .kpis {
+        gap: 10px
+    }
+
+    .kpi {
+        padding: 14px;
+        min-height: 112px
+    }
+
+    .kpi h2 {
+        font-size: 16px
+    }
+
+    .filters {
+        gap: 10px
+    }
+
+    .filters label {
+        flex: 1
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+        min-width: 0
+    }
+
+    .panel {
+        padding: 15px
+    }
+
+    .chart {
+        height: 230px
+    }
+
+    .line-chart {
+        height: 250px
+    }
+}

@@ -1,0 +1,4 @@
+export default function FilterBar({ filters, setFilters, categories }) {
+  const change = (event) => setFilters((old) => ({ ...old, [event.target.name]: event.target.value }))
+  return <section className="filters"><div className="filter-title"><span>Filter data</span><small>Updates every report</small></div><label>From<input type="date" name="from" value={filters.from} onChange={change} /></label><label>To<input type="date" name="to" value={filters.to} onChange={change} /></label><label>Category<select name="category" value={filters.category} onChange={change}><option value="">All categories</option>{categories.map(({ id, name }) => <option value={name} key={id}>{name}</option>)}</select></label>{Object.values(filters).some(Boolean) && <button onClick={() => setFilters({ from: '', to: '', category: '' })}>Clear filters</button>}</section>
+}

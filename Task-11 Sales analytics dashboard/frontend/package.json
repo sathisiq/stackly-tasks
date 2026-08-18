@@ -1,0 +1,9 @@
+{
+  "name": "sales-analytics-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite", "preview": "vite preview" },
+  "dependencies": { "@vitejs/plugin-react": "latest", "axios": "latest", "recharts": "latest", "vite": "latest", "react": "latest", "react-dom": "latest" },
+  "devDependencies": {}
+}

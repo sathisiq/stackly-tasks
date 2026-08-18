@@ -1,0 +1,1 @@
+export default function Navbar() { return <header className="navbar"><div className="brand-mark">S</div><span>Salesboard</span><div className="nav-right"><span className="nav-label">Analytics workspace</span><div className="avatar">SA</div></div></header> }
